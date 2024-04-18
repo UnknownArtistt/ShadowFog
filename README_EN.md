@@ -1,5 +1,8 @@
 [Leer esto en Español](./README.md)
 # ShadowFog
+
+<img src="capt/shadowbanner.png">
+
 ShadowFog is an anonymity tool developed in C++ that leverages Tor and Proxychains to facilitate secure and anonymous web browsing. This utility automates the entire process of installing, configuring, and executing Tor and Proxychains on your system. It allows users to run browsers and other applications through Tor and Proxychains seamlessly, ensuring your online activities remain private and protected.
 
 ## Context
@@ -23,7 +26,14 @@ First, you need to clone the ShadowFog repository to your local machine using Gi
 
 **2. Run the installation script / Compile the program**
 
-ShadowFog includes a bash script that prepares all necessary dependencies and compiles the program. Administrator permissions (sudo) are required to run this script. The script will install a C++ compiler and figlet. If you do not use the script, you can install the packages this way:
+ShadowFog includes a bash script that prepares all necessary dependencies and compiles the program. Administrator permissions (sudo) are required to run this script and you will also need to give execution permissions to the script. The script will install a C++ compiler and figlet. If you do not use the script, you can install the packages this way:
+
+Give execution permissions to the script
+
+- chmod +x shadowfog.sh
+
+Installing the packages by your own
+
 - sudo apt-get install g++ -y
 - sudo apt-get install figlet -y
 
@@ -53,13 +63,13 @@ To configure Proxychains
 
 Once you have completed the initial configuration, close the program using the -exit command and run it with your normal user (./ShadowFog). To start browsing anonymously, first, you need to change the Proxy settings of Mozilla Firefox. Open the browser and go to the **"Hamburger Menu"** (the icon with three horizontal lines). Access **"Settings"** and search for the word proxy. It will show a match, access the network settings and enter these values and check the box **"DNS proxy using SOCKS v5"** which is at the bottom.
 
-This will be the configuration to ensure all your network traffic passes through Tor and Proxychains since browsers use webRTC which can lead to DNS leaks revealing your real IP. This configuration allows anonymous browsing. You will need to use this proxy setting in Mozilla Firefox to browse.
+This will be the configuration to ensure all your network traffic passes through Tor and Proxychains since browsers use webRTC which can lead to DNS leaks revealing your real IP. This configuration allows anonymous browsing. You will need to use this proxy setting in Mozilla Firefox to browse with ShadowFog.
 
-PHOTO OF FIREFOX CONFIGURATION
+<img src="capt/manual.png">
 
-When you stop using ShadowFog and want to browse "normally" simply select the mode **"Use system proxy settings"** and uncheck the box **"DNS proxy using SOCKS v5"**. If you want to browse anonymously again, do the reverse operation, select the mode **"Manual proxy configuration"** and check the box **"DNS proxy using SOCKS v5"**.
+When you stop using ShadowFog and want to browse "normally" simply select the mode **"Use system proxy settings"** and uncheck the box **"DNS proxy using SOCKS v5"**. If you want to browse anonymously again, do the reverse operation, select the mode **"Manual proxy configuration"**, check the box **"DNS proxy using SOCKS v5"** and run ShadowFog.
 
-PHOTO OF DEFAULT FIREFOX CONFIGURATION
+<img src="capt/default.png">
 
 Once you have configured Mozilla Firefox, enter these commands to start the service and begin browsing:
 
@@ -95,6 +105,7 @@ Check if the IP is different from yours, if it is, it means you have configured 
 |Steps|Command|
 | -- | -- |
 |Clone the repository|git clone https://github.com/Julen-H/ShadowFog|
+|Give execution permissions to the script|chmod +x shadowfog.sh|
 |Run the script with sudo|sudo ./shadowfog.sh|
 |Install Tor and Proxychains|-configure|
 |Create a backup of the Proxychains configuration file|-cporiginalconf|
