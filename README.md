@@ -5,6 +5,8 @@ banner del programa
 
 ShadowFog es una herramienta de anonimato desarrollada en C++ que utiliza Tor y Proxychains para facilitar una navegación web segura y anónima. Esta utilidad automatiza todo el proceso de instalación, configuración y ejecución de Tor y Proxychains en tu sistema. Permite a los usuarios ejecutar navegadores y otras aplicaciones a través de Tor y Proxychains de manera fluida, asegurando que tus actividades en línea permanezcan privadas y protegidas.
 
+Incluye una pequeña terminal y unos comandos para poder manejar el programa de forma mas facil y rapida. Los comandos comienzan por un guión y se pueden visualizar insertando el comando -help.
+
 ## Contexto
 
 En la era digital actual, la privacidad y el anonimato en internet son más que simples lujos; son derechos esenciales que protegen la libertad individual. A medida que nuestras vidas se entrelazan cada vez más con internet, la capacidad de salvaguardar la información personal contra el acceso y la vigilancia no autorizados se ha vuelto crucial. Ya seas un periodista, un defensor de la privacidad o simplemente un usuario precavido, mantener el anonimato puede protegerte de anuncios dirigidos, prevenir el robo de identidad e incluso proteger tu libertad de expresión bajo regímenes opresivos.
