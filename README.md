@@ -73,7 +73,7 @@ Una vez hayas configurado el navegador Mozilla Firefox ingresa estos comandos pa
 |-stopsrv|Detiene el servicio de Tor, ejecutalo cuando dejes de navegar y despues de cerrar el navegador. Por ultimo cambia la configuración proxy de Firefox|
 * Puedes iniciar el programa que necesites simplemente especificalo despues de -start (p.e. -start nmap -targetadress
 
-##5. Tips y buenas practicas (Importante)
+## 5. Tips y buenas practicas (Importante)
 
 ShadowFog permite crear una copia de el archivo de configuración de Proxychains. Antes de realizar la configuración inicial de Proxychains animo a todo usuario a realizar una copia para tener una copia y poder restaurarlo en caso de error o en el caso de que quieras cambiar de modo.
 
@@ -90,7 +90,7 @@ Puedes verificar si Tor y Proxychains esta funcionando de forma correcta y que e
 
 Verifica si la IP es diferente a la tuya, si es asi quiere decir que has configurado todo de manera correcta y que estas listo para navegar
 
-##6. Guia resumida paso a paso
+## 6. Guia resumida paso a paso
 
 |Pasos|
 | -- |
