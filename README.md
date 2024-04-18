@@ -1,11 +1,12 @@
 # ShadowFog
-ShadowFog is an anonymity tool developed in C++ that leverages Tor and Proxychains to facilitate secure and anonymous web browsing. This utility automates the entire process of installing, configuring, and executing Tor and Proxychains on your system. It allows users to run browsers and other applications through Tor and Proxychains seamlessly, ensuring your online activities remain private and protected.
 
-## Context
+ShadowFog es una herramienta de anonimato desarrollada en C++ que utiliza Tor y Proxychains para facilitar una navegación web segura y anónima. Esta utilidad automatiza todo el proceso de instalación, configuración y ejecución de Tor y Proxychains en tu sistema. Permite a los usuarios ejecutar navegadores y otras aplicaciones a través de Tor y Proxychains de manera fluida, asegurando que tus actividades en línea permanezcan privadas y protegidas.
 
-In today's digital age, privacy and anonymity on the internet are more than just luxuries; they are essential rights that protect individual freedom. As our lives become increasingly intertwined with the internet, the ability to safeguard personal information from unauthorized access and surveillance has become crucial. Whether you're a journalist, a privacy advocate, or simply a cautious user, maintaining anonymity can shield you from targeted ads, prevent identity theft, and even protect your freedom of speech under oppressive regimes.
+## Contexto
 
-ShadowFog is designed to empower users by providing robust tools for anonymous web navigation. Leveraging the power of Tor and Proxychains, ShadowFog automates the complex processes of installation, configuration, and operation, making it easier than ever to browse the web securely and anonymously. This tool is not just about accessing the web; it's about reclaiming your right to privacy in an era where digital footprints are constantly monitored.
+En la era digital actual, la privacidad y el anonimato en internet son más que simples lujos; son derechos esenciales que protegen la libertad individual. A medida que nuestras vidas se entrelazan cada vez más con internet, la capacidad de salvaguardar la información personal contra el acceso y la vigilancia no autorizados se ha vuelto crucial. Ya seas un periodista, un defensor de la privacidad o simplemente un usuario precavido, mantener el anonimato puede protegerte de anuncios dirigidos, prevenir el robo de identidad e incluso proteger tu libertad de expresión bajo regímenes opresivos.
+
+ShadowFog está diseñado para empoderar a los usuarios proporcionando herramientas robustas para la navegación web anónima. Aprovechando el poder de Tor y Proxychains, ShadowFog automatiza los procesos complejos de instalación, configuración y operación, facilitando más que nunca la navegación segura y anónima por la web. Esta herramienta no se trata solo de acceder a la web; se trata de reclamar tu derecho a la privacidad en una era donde las huellas digitales son constantemente monitoreadas.
 
 ## Disclaimer
 
