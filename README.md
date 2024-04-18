@@ -73,9 +73,9 @@ Una vez hayas configurado el navegador Mozilla Firefox ingresa estos comandos pa
 |-stopsrv|Detiene el servicio de Tor, ejecutalo cuando dejes de navegar y despues de cerrar el navegador. Por ultimo cambia la configuración proxy de Firefox|
 * Puedes iniciar el programa que necesites simplemente especificalo despues de -start (p.e. -start nmap -targetadress
 
-**5. Tips y buenas practicas** (Importante)
+##5. Tips y buenas practicas (Importante)
 
-ShadowFog permite crear una copia de el archivo de configuración de Proxichains. Antes de realizar la configuración inicial de Proxychains animo a todo usuario a realizar una copia para tener una copia y poder restaurarlo en caso de error o en el caso de que quieras cambiar de modo.
+ShadowFog permite crear una copia de el archivo de configuración de Proxychains. Antes de realizar la configuración inicial de Proxychains animo a todo usuario a realizar una copia para tener una copia y poder restaurarlo en caso de error o en el caso de que quieras cambiar de modo.
 
 Ejecuta el comando **-cporiginalconf** en la shell de ShadowFog. Te pedira que insertes la ruta donde se hara el backup del archivo de configuración. Puedes dejarlo en el escritorio o dentro del directorio de ShadowFog (p.e. /home/miusuario/Escritorio/conforiginal.conf).
 
@@ -90,23 +90,25 @@ Puedes verificar si Tor y Proxychains esta funcionando de forma correcta y que e
 
 Verifica si la IP es diferente a la tuya, si es asi quiere decir que has configurado todo de manera correcta y que estas listo para navegar
 
-**6. Guia resumida paso a paso**
+##6. Guia resumida paso a paso
 
-- git clone https://github.com/Julen-H/ShadowFog
-- sudo ./shadowfog.sh
-- -configure
-- -cporiginalconf
-- -set dynamic o -set random 2
-- Cierra en programa y ejecutalo con tu usuario normal -> ./ShadowFog
-- Ajusta la configuración proxy en Mozilla Firefox
-- -runsrv
-- Verifica que el servicio de Tor se encuentra activo -> -status
-- -start firefox
-- Navega de forma segura y anonima y disfruta :)
-- Cierra el navegador cuando hayas acabado
-- Ajusta la configuración por defecto en Firefox
-- -stopsrv
-- Cierra ShadowFog -> -exit
+|Pasos|
+| -- |
+|git clone https://github.com/Julen-H/ShadowFog|
+|sudo ./shadowfog.sh|
+|-configure|
+|-cporiginalconf|
+|-set dynamic o -set random 2|
+|Cierra en programa y ejecutalo con tu usuario normal -> ./ShadowFog|
+|Ajusta la configuración proxy en Mozilla Firefox|
+|-runsrv|
+|Verifica que el servicio de Tor se encuentra activo -> -status|
+|-start firefox|
+|Navega de forma segura y anonima y disfruta :)|
+|Cierra el navegador cuando hayas acabado|
+|Ajusta la configuración por defecto en Firefox|
+|-stopsrv|
+|Cierra ShadowFog -> -exit|
 
 
 
