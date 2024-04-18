@@ -102,7 +102,7 @@ Verifica si la IP es diferente a la tuya, si es asi quiere decir que has configu
 |Instala Tor y Proxychains|-configure|
 |Crea una copia del archivo de configuración de Proxychains|-cporiginalconf|
 |Ajusta el modo de Proxychains|-set dynamic o -set random 2|
-|Cierra en programa|-exit|
+|Cierra el programa|-exit|
 |Ejecutalo con tu usuario normal|./ShadowFog|
 |Ajusta la configuración proxy en Mozilla Firefox|Ver punto 4|
 |Inicia el servicio de Tor|-runsrv|
