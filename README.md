@@ -15,4 +15,38 @@ Este software se proporciona "tal cual", sin garantía de ningún tipo, expresa 
 
 El uso de ShadowFog para actividades que infrinjan la ley esta estrictamente prohibido. El desarrollador de ShadowFog no aprueba el uso ilegal de herramientas de anonimato y no se hace responsable de cualquier uso indebido del software. El usuario final es el único responsable de asegurarse que todas sus acciones con ShadowFog cumplan con las leyes aplicables en su jurisdicción.
 
-## 
+## Instalación y uso
+
+**1. Clonar el repositorio / Descargar codigo fuente**
+
+Primero, debes clonar el repositorio de ShadowFog a tu máquina local utilizando Github o puedes descargar el codigo fuente.
+- git clone https://github.com/Julen-H/ShadowFog
+
+**2. Ejecutar el script de instalacion / Compilar el programa**
+
+ShadowFog incluye un script de bash que prepara todas las dependencias necesarias y compila el programa. Es necesario tener permisos de administrador (sudo) para ejecutar este script. El script instalara un compilador para c++ y figlet. Si no usas el script puede instalar los paquetes de esta manera:
+- sudo apt-get install g++ -y
+- sudo apt-get install figlet -y
+
+Una vez instalados, ejecuta el script en modo administrador (sudo) o si deseas ejecuta directamente el script y se descargaran automaticamente. Además una vez que se instalan los paquetes el script compilara y ejecutara el programa automaticamente. 
+
+**ATENCIÓN**
+Cuando el script compila y ejecuta el programa, ejecutara ShadowFog como administrador (sudo) ya que deberas de realizar la configuración inicial de Proxychains. La configuración se hace editando parametros en el archivo de configuración (el .conf file que se encuentra en /etc/proxychains4.conf), para ello necesitaras permisos de administrador. Es por eso que se ejecuta como administrador (sudo). Una vez que se haya llevado a cabo la configuración cierra el programa y ejecutalo con tu usuario normal. Haz lo mismo cuando desees usar el programa en tu dia a dia.
+
+Ejecuta el script en modo administrador (sudo)
+- sudo ./shadowfog.sh
+
+**3. Configuración inicial**
+
+Despues de que el script haya compilado y ejecutado el programa y antes de empezar a navegar de forma seegura y anonima, es crucial realizar una configuración inicial. Esta configuración incluye la instalación y configuración de Tor y Proxychains, lo cual se realiza a través del comando -configure dentro de ShadowFog. Una vez se instalan Tor y Proxychains hay que realizar la configuración de Proxychains. Para ello podemos usar el comando -set y especificar el modo de las cadenas. 
+
+Para instalar Tor y Proxychains
+
+|Modo|Comando|
+| -- | -- |
+|Dinamico|-set dynamic|
+|Random|-set random 3|
+* El numero despues de random es la longitud de la cadena, en este caso Proxychains rebotara en 3 proxies. Puedes elegir la longitud como veas adecuado, por defecto suele configurarse en 2
+
+
+
