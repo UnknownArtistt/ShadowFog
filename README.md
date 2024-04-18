@@ -69,7 +69,7 @@ Esta sera la configuración para que todo tu trafico de red pase por Tor y Proxy
 
 <img src="capt/manual.png">
 
-Cuando dejes de usar ShadowFog y quieras navegar de manera "normal" simplemente selecciona el modo **"Usar la configuración proxy del sistema"** y desfija la casilla **DNS proxy usando SOCKS v5**. Si quieres volver a navegar de manera anonima haces la operación inversa, selecciona el modo **"Configuración manual de proxy"** y marca la casilla **DNS proxy usando SOCKS v5**.
+Cuando dejes de usar ShadowFog y quieras navegar de manera "normal" simplemente selecciona el modo **"Usar la configuración proxy del sistema"** y desfija la casilla **DNS proxy usando SOCKS v5**. Si quieres volver a navegar de manera anonima haces la operación inversa, selecciona el modo **"Configuración manual de proxy"**, marca la casilla **DNS proxy usando SOCKS v5** y ejecuta ShadowFog.
 
 <img src="capt/default.png">
 
