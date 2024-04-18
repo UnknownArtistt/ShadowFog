@@ -1,7 +1,7 @@
 [Read this in English](./README_EN.md)
 # ShadowFog
 
-banner del programa
+<img src="capt/shadowbanner.png">
 
 ShadowFog es una herramienta de anonimato desarrollada en C++ que utiliza Tor y Proxychains para facilitar una navegación web segura y anónima. Esta utilidad automatiza todo el proceso de instalación, configuración y ejecución de Tor y Proxychains en tu sistema. Permite a los usuarios ejecutar navegadores y otras aplicaciones a través de Tor y Proxychains de manera fluida, asegurando que tus actividades en línea permanezcan privadas y protegidas.
 
@@ -28,7 +28,14 @@ Primero, debes clonar el repositorio de ShadowFog a tu máquina local utilizando
 
 **2. Ejecutar el script de instalacion / Compilar el programa**
 
-ShadowFog incluye un script de bash que prepara todas las dependencias necesarias y compila el programa. Es necesario tener permisos de administrador (sudo) para ejecutar este script. El script instalara un compilador para c++ y figlet. Si no usas el script puedes instalar los paquetes de esta manera:
+ShadowFog incluye un script de bash que prepara todas las dependencias necesarias y compila el programa. Es necesario tener permisos de administrador (sudo) para ejecutar este script y tambien es necesario darle permisos de ejecución. El script instalara un compilador para c++ y figlet. Si no usas el script puedes instalar los paquetes de esta manera:
+
+Dar permisos de ejecución:
+
+- chmod +x shadowfog.sh
+
+Instalar paquetes por tu propia cuenta
+
 - sudo apt-get install g++ -y
 - sudo apt-get install figlet -y
 
@@ -60,11 +67,11 @@ Una vez hayas realizado la configuración inicial cierra el programa usando el c
 
 Esta sera la configuración para que todo tu trafico de red pase por Tor y Proxychains ya que los navegadores usan usan webRTC y hace que haya fugas DNS dejando al descubierto tu IP real. Esta configuración permite navegar en modo anonimo. Necesitaras usar esta configuración proxy en Mozilla Firefox para navegar.
 
-FOTO DE LA CONFI DE FIREFOX
+<img src="capt/manual.png">
 
 Cuando dejes de usar ShadowFog y quieras navegar de manera "normal" simplemente selecciona el modo **"Usar la configuración proxy del sistema"** y desfija la casilla **DNS proxy usando SOCKS v5**. Si quieres volver a navegar de manera anonima haces la operación inversa, selecciona el modo **"Configuración manual de proxy"** y marca la casilla **DNS proxy usando SOCKS v5**.
 
-FOTO DE LA CONFIG POR DEFECTO DE FIREFOX
+<img src="capt/default.png">
 
 Una vez hayas configurado el navegador Mozilla Firefox ingresa estos comandos para iniciar el servicio y empezar a navegar:
 
@@ -100,6 +107,7 @@ Verifica si la IP es diferente a la tuya, si es asi quiere decir que has configu
 |Pasos|Comando|
 | -- | -- |
 |Clona el repositorio|git clone https://github.com/Julen-H/ShadowFog|
+|Darle permisos de ejecución al script|chmod +x shadowfog.sh|
 |Ejecuta el script con sudo|sudo ./shadowfog.sh|
 |Instala Tor y Proxychains|-configure|
 |Crea una copia del archivo de configuración de Proxychains|-cporiginalconf|
