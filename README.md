@@ -83,6 +83,8 @@ Si necesitas restaurar la configuración inicial o deseas cambiar de modo de cad
 
 Recuerda que si quieres cambiar el modo de cadena debes de restaurar la configuración inicial y despues ejecutar el programa en modo administrador (sudo). Acto seguido realiza la configuración de nuevo especificando el modo que deseas.
 
+Recuerda que el archivo de configuración se encuentra en el directorio etc (/etc/proxychains4.conf)
+
 Puedes verificar si Tor y Proxychains esta funcionando de forma correcta y que esta escondiendo tu IP real haciendo una petición curl. Para eso instala curl y ejecuta el siguiente comando en una terminal nueva:
 
 - sudo apt install curl
