@@ -95,23 +95,24 @@ Verifica si la IP es diferente a la tuya, si es asi quiere decir que has configu
 
 ## 6. Guia resumida paso a paso
 
-|Pasos|
-| -- |
-|git clone https://github.com/Julen-H/ShadowFog|
-|sudo ./shadowfog.sh|
-|-configure|
-|-cporiginalconf|
-|-set dynamic o -set random 2|
-|Cierra en programa y ejecutalo con tu usuario normal -> ./ShadowFog|
-|Ajusta la configuración proxy en Mozilla Firefox|
-|-runsrv|
-|Verifica que el servicio de Tor se encuentra activo -> -status|
-|-start firefox|
-|Navega de forma segura y anonima y disfruta :)|
-|Cierra el navegador cuando hayas acabado|
-|Ajusta la configuración por defecto en Firefox|
-|-stopsrv|
-|Cierra ShadowFog -> -exit|
+|Pasos|Comando|
+| -- | -- |
+|Clona el repositorio|git clone https://github.com/Julen-H/ShadowFog|
+|Ejecuta el script con sudo|sudo ./shadowfog.sh|
+|Instala Tor y Proxychains|-configure|
+|Crea una copia del archivo de configuración de Proxychains|-cporiginalconf|
+|Ajusta el modo de Proxychains|-set dynamic o -set random 2|
+|Cierra en programa|-exit|
+|Ejecutalo con tu usuario normal|./ShadowFog|
+|Ajusta la configuración proxy en Mozilla Firefox|Ver punto 4|
+|Inicia el servicio de Tor|-runsrv|
+|Verifica que el servicio de Tor se encuentra activo|-status|
+|Inicia un navegador o programa|-start firefox|
+|Navega de forma segura y anonima y disfruta :)||
+|Cierra el navegador cuando hayas acabado||
+|Ajusta la configuración por defecto en Firefox|Ver punto 4|
+|Deten el servicio de Tor|-stopsrv|
+|Cierra ShadowFog|-exit|
 
 
 
