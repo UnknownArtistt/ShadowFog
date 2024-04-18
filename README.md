@@ -45,6 +45,7 @@ Despues de que el script haya compilado y ejecutado el programa y antes de empez
 Para instalar Tor y Proxychains
 - -configure
 
+Para realizar la configuración de Proxychains
 |Modo|Comando|
 | -- | -- |
 |Dinamico|-set dynamic|
