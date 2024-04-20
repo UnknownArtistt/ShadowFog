@@ -17,18 +17,18 @@ void showBanner();
 
 #include <cstdlib>
 
-void installDependencies() {
+/*void installDependencies() {
     // Update packages and later install tor and proxychains 
-    int status = system("sudo apt update && sudo apt install -y tor proxychains4");
+    int status = system("sudo apt update && sudo apt install -y tor proxychains");
 
     if (status != 0) {
         // Error handler
-        std::cerr << "Error: Failed to install Tor and Proxychains4." << std::endl;
+        std::cerr << "Error: Failed to install Tor and Proxychains." << std::endl;
         return;
     }
 
     // Configure execution permissions for the proxychains library 
-    status = system("sudo chmod +x /usr/lib/x86_64-linux-gnu/libproxychains.so.4");
+    status = system("sudo chmod +x /usr/lib/x86_64-linux-gnu/libproxychains.so.3");
 
     if (status != 0) {
         // Error handler
@@ -36,6 +36,19 @@ void installDependencies() {
     } else {
         std::cout << "Dependencies installed and configured successfully." << std::endl;
     }
+}*/
+
+void installDependencies() {
+    // Update packages and later install tor and proxychains 
+    int status = system("sudo apt update && sudo apt install -y tor proxychains");
+
+    if (status != 0) {
+        // Error handler
+        std::cerr << "Error: Failed to install Tor and Proxychains." << std::endl;
+        return;
+    }
+
+    std::cout << "Dependencies installed successfully." << std::endl;
 }
 
 
@@ -64,10 +77,10 @@ void executeWithProxychains(const std::string& command) {
     std::string fullCommand;
     if (sudo_user) {
         // Executes the command as normal user to avoid errors with x11 and permissions
-        fullCommand = "sudo -u " + std::string(sudo_user) + " proxychains4 " + command;
+        fullCommand = "sudo -u " + std::string(sudo_user) + " proxychains " + command;
     } else {
         // If there isnt sudo user executes normally 
-        fullCommand = "proxychains4 " + command;
+        fullCommand = "proxychains " + command;
     }
 
     // Executes the command
@@ -79,9 +92,9 @@ void executeWithProxychains(const std::string& command) {
 
 // Modifies the proxychains conf file
 void modifyProxyChainsConfig(const std::string& mode, int chain_len) {
-    std::ifstream fileIn("/etc/proxychains4.conf"); // open the conf file
+    std::ifstream fileIn("/etc/proxychains.conf"); // open the conf file
     if (!fileIn.is_open()) { // error handler
-        std::cerr << "Error: unable to open the conf file at /etc/proxychains4.conf. Please check the dependencies or check if the file exists" << std::endl;
+        std::cerr << "Error: unable to open the conf file at /etc/proxychains.conf. Please check the dependencies or check if the file exists" << std::endl;
         return;
     }
 
@@ -116,15 +129,15 @@ void modifyProxyChainsConfig(const std::string& mode, int chain_len) {
 
     fileIn.close(); // closes the conf file
 
-    std::ofstream fileOut("/etc/proxychains4.conf.tmp", std::ios::trunc); // opens the tmp file
+    std::ofstream fileOut("/etc/proxychains.conf.tmp", std::ios::trunc); // opens the tmp file
     if (!fileOut.is_open()) {
-        std::cerr << "Error: unable to open the conf file at /etc/proxychains4.conf.tmp for writing" << std::endl; // error handler
+        std::cerr << "Error: unable to open the conf file at /etc/proxychains.conf.tmp for writing" << std::endl; // error handler
         return;
     }
     fileOut << content; // writes everything on the tmp file
     fileOut.close();
 
-    system("mv /etc/proxychains4.conf.tmp /etc/proxychains4.conf"); // Replaces the tmp with the original
+    system("mv /etc/proxychains.conf.tmp /etc/proxychains.conf"); // Replaces the tmp with the original
 }
 
 // Makes a copy of the original conf file, is a good practice to set a backup before you set the configuration
@@ -137,7 +150,7 @@ void copyOriginalConfig() {
         return;
     }
 
-    std::string command = "cp /etc/proxychains4.conf " + destinationPath; // builds full command
+    std::string command = "cp /etc/proxychains.conf " + destinationPath; // builds full command
     if (system(command.c_str()) == 0) { // runs the command and verifies the return code
         std::cout << "Succesfully created a backup on: " << destinationPath << "\n"; // success
     } else {
@@ -147,7 +160,7 @@ void copyOriginalConfig() {
 
 // Not implemented will never be able to show if proxychains is running
 void showAnonimousIp() {
-    system("proxychains4 curl https://icanhazip.com");
+    system("proxychains curl https://icanhazip.com");
 }
 
 void showHelp() { // shows the usage 
